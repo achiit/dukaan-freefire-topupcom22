@@ -1,0 +1,8 @@
+$("login").onclick = function () {
+  const username = prompt("Login to DiamondDock", "demo_user");
+  if (!username) return;
+
+  localStorage.setItem("diamondDockUser", username);
+  this.textContent = "Logged in";
+  this.disabled = true;
+};
